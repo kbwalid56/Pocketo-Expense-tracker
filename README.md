@@ -83,3 +83,6 @@ anything.
 - Transaction amounts must be greater than zero.
 - Budgets are scoped to a month (`YYYY-MM`), and budget progress only counts that month's expenses.
 - Editing or deleting a transaction immediately updates dashboard totals, budgets and reports.
+
+## 📥 Download
+[Download Latest Version]([https://github.com/kbwalid56/Pocketo-Expense-tracker//releases/latest)
