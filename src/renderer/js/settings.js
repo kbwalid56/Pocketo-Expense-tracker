@@ -12,7 +12,7 @@
       <div class="view-inner">
         <div class="settings-grid">
           <div class="card">
-            <div class="card-head"><div><h2>Appearance</h2><p>How Spendly looks on this computer</p></div></div>
+            <div class="card-head"><div><h2>Appearance</h2><p>How Pocketo looks on this computer</p></div></div>
             <div class="card-body">
               <div class="setting-row">
                 <div>
@@ -72,7 +72,7 @@
               <div class="setting-row">
                 <div>
                   <div class="title">Restore backup</div>
-                  <div class="desc">Replace all current data with a Spendly backup file.</div>
+                  <div class="desc">Replace all current data with a Pocketo backup file.</div>
                 </div>
                 <button class="btn" id="s-restore">Restore</button>
               </div>
@@ -80,10 +80,10 @@
           </div>
 
           <div class="card">
-            <div class="card-head"><div><h2>About Spendly</h2><p>Version ${app.esc(info.version)}</p></div></div>
+            <div class="card-head"><div><h2>About Pocketo</h2><p>Version ${app.esc(info.version)}</p></div></div>
             <div class="card-body">
               <div class="info-list">
-                <div><span class="k">Application</span><span class="v">Spendly — personal expense tracker</span></div>
+                <div><span class="k">Application</span><span class="v">Pocketo — personal expense tracker</span></div>
                 <div><span class="k">Version</span><span class="v">${app.esc(info.version)}</span></div>
                 <div><span class="k">Electron</span><span class="v">${app.esc(info.electron)}</span></div>
                 <div><span class="k">Chromium</span><span class="v">${app.esc(info.chrome)}</span></div>
@@ -92,7 +92,7 @@
                 <div><span class="k">Database</span><span class="v code-path">${app.esc(info.database)}</span></div>
               </div>
               <p class="muted" style="margin-top:14px;font-size:12.5px;line-height:1.6">
-                Spendly works completely offline. All amounts, categories and budgets live in a single SQLite
+                Pocketo works completely offline. All amounts, categories and budgets live in a single SQLite
                 file on this machine. Back it up regularly if the data matters to you.
               </p>
             </div>

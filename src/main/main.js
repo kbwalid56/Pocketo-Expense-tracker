@@ -50,7 +50,7 @@ function createWindow() {
     minHeight: 720,
     show: false,
     backgroundColor: '#0a0e14',
-    title: 'Spendly',
+    title: 'Pocketo',
     autoHideMenuBar: true,
     webPreferences: {
       preload: path.join(__dirname, '..', 'preload', 'preload.js'),
@@ -126,7 +126,7 @@ function registerIpc() {
       const suffix = range.label === 'all' ? 'all' : `${range.from}_to_${range.to}`;
       const result = await dialog.showSaveDialog(mainWindow, {
         title: 'Export transactions',
-        defaultPath: path.join(app.getPath('documents'), `spendly-transactions-${suffix}.csv`),
+        defaultPath: path.join(app.getPath('documents'), `pocketo-transactions-${suffix}.csv`),
         filters: [{ name: 'CSV file', extensions: ['csv'] }],
       });
       if (result.canceled || !result.filePath) return { canceled: true };
@@ -140,9 +140,9 @@ function registerIpc() {
     'data:backup',
     handle(async () => {
       const result = await dialog.showSaveDialog(mainWindow, {
-        title: 'Back up Spendly database',
-        defaultPath: path.join(app.getPath('documents'), `spendly-backup-${stamp()}.sqlite`),
-        filters: [{ name: 'Spendly database', extensions: ['sqlite', 'db'] }],
+        title: 'Back up Pocketo database',
+        defaultPath: path.join(app.getPath('documents'), `pocketo-backup-${stamp()}.sqlite`),
+        filters: [{ name: 'Pocketo database', extensions: ['sqlite', 'db'] }],
       });
       if (result.canceled || !result.filePath) return { canceled: true };
 
@@ -155,9 +155,9 @@ function registerIpc() {
     'data:restore',
     handle(async () => {
       const result = await dialog.showOpenDialog(mainWindow, {
-        title: 'Restore Spendly database',
+        title: 'Restore Pocketo database',
         properties: ['openFile'],
-        filters: [{ name: 'Spendly database', extensions: ['sqlite', 'db'] }],
+        filters: [{ name: 'Pocketo database', extensions: ['sqlite', 'db'] }],
       });
       if (result.canceled || !result.filePaths.length) return { canceled: true };
 
@@ -169,7 +169,7 @@ function registerIpc() {
   ipcMain.handle(
     'app:info',
     handle(() => ({
-      name: 'Spendly',
+      name: 'Pocketo',
       version: app.getVersion(),
       electron: process.versions.electron,
       chrome: process.versions.chrome,

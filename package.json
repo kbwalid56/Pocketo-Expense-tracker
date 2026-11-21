@@ -1,9 +1,9 @@
 {
-  "name": "spendly",
-  "productName": "Spendly",
+  "name": "pocketo",
+  "productName": "Pocketo",
   "version": "1.0.0",
-  "description": "Spendly - personal expense tracker. Track your money. Understand your habits. Control your spending.",
-  "author": "Spendly",
+  "description": "Pocketo - personal expense tracker. Track your money. Understand your habits. Control your spending.",
+  "author": "Pocketo",
   "license": "MIT",
   "main": "src/main/main.js",
   "scripts": {
@@ -19,8 +19,8 @@
     "electron-builder": "^26.18.0"
   },
   "build": {
-    "appId": "com.spendly.desktop",
-    "productName": "Spendly",
+    "appId": "com.pocketo.desktop",
+    "productName": "Pocketo",
     "directories": {
       "output": "dist"
     },
@@ -40,7 +40,7 @@
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
-      "shortcutName": "Spendly"
+      "shortcutName": "Pocketo"
     }
   }
 }

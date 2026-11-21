@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Spendly data layer.
+ * Pocketo data layer.
  *
  * SQLite is provided by sql.js (SQLite compiled to WebAssembly) so the app
  * ships without native modules that would need rebuilding per Electron ABI.
@@ -179,7 +179,7 @@ function transaction(fn) {
 
 async function init(userDataDir) {
   fs.mkdirSync(userDataDir, { recursive: true });
-  dbPath = path.join(userDataDir, 'spendly.sqlite');
+  dbPath = path.join(userDataDir, 'pocketo.sqlite');
 
   const wasmDir = path.dirname(require.resolve('sql.js'));
   SQL = await initSqlJs({
@@ -731,12 +731,12 @@ function restoreFrom(sourcePath) {
     if (res.length) res[0].values.forEach((row) => tables.add(row[0]));
   } catch {
     probe.close();
-    fail('That file is not a valid Spendly backup.');
+    fail('That file is not a valid Pocketo backup.');
   }
   probe.close();
 
   if (!tables.has('transactions') || !tables.has('categories')) {
-    fail('That file is not a Spendly backup.');
+    fail('That file is not a Pocketo backup.');
   }
 
   db.close();

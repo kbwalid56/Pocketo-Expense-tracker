@@ -1,8 +1,8 @@
-# Spendly
+# Pocketo
 
 **Track your money. Understand your habits. Control your spending.**
 
-Spendly is an offline desktop expense tracker for Windows, built with Electron and Node.js and backed by a
+Pocketo is an offline desktop expense tracker for Windows, built with Electron and Node.js and backed by a
 local SQLite database. No account, no internet connection, no cloud — your financial data never leaves your
 computer.
 
@@ -67,13 +67,13 @@ src/
 
 ## Data and storage
 
-The database is a single SQLite file named `spendly.sqlite` inside Electron's per-user data folder
-(typically `%APPDATA%\Spendly\spendly.sqlite`). Its exact path is shown in **Settings → About Spendly**.
+The database is a single SQLite file named `pocketo.sqlite` inside Electron's per-user data folder
+(typically `%APPDATA%\Pocketo\pocketo.sqlite`). Its exact path is shown in **Settings → About Pocketo**.
 
 SQLite itself is provided by `sql.js` (SQLite compiled to WebAssembly), so the app has no native modules and
 needs no per-Electron-version rebuild. The database file is written atomically after every change.
 
-Backups copy that file; restores validate that the chosen file is a real Spendly database before replacing
+Backups copy that file; restores validate that the chosen file is a real Pocketo database before replacing
 anything.
 
 ## Business rules
