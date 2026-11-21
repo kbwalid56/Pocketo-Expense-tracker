@@ -1,0 +1,46 @@
+{
+  "name": "spendly",
+  "productName": "Spendly",
+  "version": "1.0.0",
+  "description": "Spendly - personal expense tracker. Track your money. Understand your habits. Control your spending.",
+  "author": "Spendly",
+  "license": "MIT",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "dependencies": {
+    "chart.js": "^4.6.1",
+    "sql.js": "^1.17.0"
+  },
+  "devDependencies": {
+    "electron": "^45.4.1",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "com.spendly.desktop",
+    "productName": "Spendly",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "asarUnpack": [
+      "node_modules/sql.js/dist/sql-wasm.wasm"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "Spendly"
+    }
+  }
+}
