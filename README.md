@@ -85,4 +85,5 @@ anything.
 - Editing or deleting a transaction immediately updates dashboard totals, budgets and reports.
 
 ## 📥 Download
-[Download Latest Version]([https://github.com/kbwalid56/Pocketo-Expense-tracker/releases/latest)
+
+[![Download Pocketo](https://img.shields.io/badge/Download-Pocketo-blue?style=for-the-badge&logo=windows)](https://github.com/kbwalid56/Pocketo-Expense-tracker/releases/latest)
